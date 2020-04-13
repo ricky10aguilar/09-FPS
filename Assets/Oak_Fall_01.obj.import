@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Oak_Fall_01.obj-c881b6b45bc8ded1340bc47f730a7394.mesh"
+
+[deps]
+
+files=[ "res://.import/Oak_Fall_01.obj-c881b6b45bc8ded1340bc47f730a7394.mesh" ]
+
+source_file="res://Assets/Oak_Fall_01.obj"
+dest_files=[ "res://.import/Oak_Fall_01.obj-c881b6b45bc8ded1340bc47f730a7394.mesh", "res://.import/Oak_Fall_01.obj-c881b6b45bc8ded1340bc47f730a7394.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

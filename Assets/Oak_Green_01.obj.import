@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Oak_Green_01.obj-8db34bf970cb84a338e97021a4b5be8a.mesh"
+
+[deps]
+
+files=[ "res://.import/Oak_Green_01.obj-8db34bf970cb84a338e97021a4b5be8a.mesh" ]
+
+source_file="res://Assets/Oak_Green_01.obj"
+dest_files=[ "res://.import/Oak_Green_01.obj-8db34bf970cb84a338e97021a4b5be8a.mesh", "res://.import/Oak_Green_01.obj-8db34bf970cb84a338e97021a4b5be8a.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
