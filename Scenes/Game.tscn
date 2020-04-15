@@ -49,12 +49,12 @@ points = PoolVector3Array( -35.2414, -0.741379, -35.2414, -35.2414, -0.741379, 3
 [sub_resource type="CapsuleShape" id=5]
 radius = 0.5
 
-[sub_resource type="CapsuleMesh" id=15]
+[sub_resource type="CapsuleMesh" id=6]
 
-[sub_resource type="BoxShape" id=6]
+[sub_resource type="BoxShape" id=7]
 extents = Vector3( 0.4, 0.1, 0.4 )
 
-[sub_resource type="SpatialMaterial" id=7]
+[sub_resource type="SpatialMaterial" id=8]
 params_diffuse_mode = 1
 params_billboard_mode = 3
 particles_anim_h_frames = 1
@@ -64,20 +64,20 @@ albedo_color = Color( 1, 0.603922, 0, 1 )
 metallic = 0.25
 metallic_specular = 1.0
 
-[sub_resource type="Gradient" id=8]
+[sub_resource type="Gradient" id=9]
 offsets = PoolRealArray( 0.0222222, 0.385185 )
 colors = PoolColorArray( 0.976562, 0.93627, 0.331879, 1, 0.960938, 0.454985, 0.0487976, 1 )
 
-[sub_resource type="GradientTexture" id=9]
-gradient = SubResource( 8 )
+[sub_resource type="GradientTexture" id=10]
+gradient = SubResource( 9 )
 
-[sub_resource type="Curve" id=10]
+[sub_resource type="Curve" id=11]
 _data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.987342, 0.512062 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=11]
-curve = SubResource( 10 )
+[sub_resource type="CurveTexture" id=12]
+curve = SubResource( 11 )
 
-[sub_resource type="ParticlesMaterial" id=12]
+[sub_resource type="ParticlesMaterial" id=13]
 emission_shape = 1
 emission_sphere_radius = 1.0
 spread = 1.55
@@ -89,13 +89,13 @@ radial_accel_random = 0.11
 angle = -148.8
 angle_random = 0.67
 scale = 0.6
-scale_curve = SubResource( 11 )
-color_ramp = SubResource( 9 )
+scale_curve = SubResource( 12 )
+color_ramp = SubResource( 10 )
 anim_speed = 4.41
 
-[sub_resource type="CubeMesh" id=13]
+[sub_resource type="CubeMesh" id=14]
 
-[sub_resource type="BoxShape" id=14]
+[sub_resource type="BoxShape" id=15]
 
 [node name="Game" type="Spatial"]
 script = ExtResource( 4 )
@@ -126,12 +126,12 @@ shape = SubResource( 5 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Player/Body "]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0, 0 )
-mesh = SubResource( 15 )
+mesh = SubResource( 6 )
 material/0 = null
 
 [node name="Feet" type="CollisionShape" parent="Player"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="Pivot" type="Spatial" parent="Player"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0 )
@@ -716,14 +716,14 @@ transform = Transform( 1.73205, 0, -1, 0, 2, 0, 1, 0, 1.73205, -5, 0.1, 0 )
 
 [node name="Particles" type="Particles" parent="Items/Campfire_01"]
 transform = Transform( 0.0707107, 0, 0.0707108, 0, 0.1, 0, -0.0707108, 0, 0.0707107, 0.360448, 0.123985, -0.30512 )
-material_override = SubResource( 7 )
+material_override = SubResource( 8 )
 use_in_baked_light = true
 amount = 20
 explosiveness = 0.26
 randomness = 0.33
 visibility_aabb = AABB( -4, -8, -4, 8, 16, 8 )
-process_material = SubResource( 12 )
-draw_pass_1 = SubResource( 13 )
+process_material = SubResource( 13 )
+draw_pass_1 = SubResource( 14 )
 
 [node name="DirectionalLight" type="OmniLight" parent="Items/Campfire_01"]
 transform = Transform( 0.213538, 0.129855, -0.00626558, -0.00118703, -0.0101007, -0.249793, -0.13, 0.213391, -0.00801098, 0.372856, -0.0730203, -0.303883 )
@@ -1418,7 +1418,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape" type="CollisionShape" parent="Enemies/Tank"]
-shape = SubResource( 14 )
+shape = SubResource( 15 )
 
 [node name="Timer" type="Timer" parent="Enemies/Tank"]
 one_shot = true
@@ -1440,7 +1440,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape" type="CollisionShape" parent="Enemies/Tank4"]
-shape = SubResource( 14 )
+shape = SubResource( 15 )
 
 [node name="Timer" type="Timer" parent="Enemies/Tank4"]
 one_shot = true
@@ -1462,7 +1462,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape" type="CollisionShape" parent="Enemies/Tank5"]
-shape = SubResource( 14 )
+shape = SubResource( 15 )
 
 [node name="Timer" type="Timer" parent="Enemies/Tank5"]
 one_shot = true
@@ -1484,7 +1484,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape" type="CollisionShape" parent="Enemies/Tank2"]
-shape = SubResource( 14 )
+shape = SubResource( 15 )
 
 [node name="Timer" type="Timer" parent="Enemies/Tank2"]
 one_shot = true
@@ -1506,7 +1506,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape" type="CollisionShape" parent="Enemies/Tank3"]
-shape = SubResource( 14 )
+shape = SubResource( 15 )
 
 [node name="Timer" type="Timer" parent="Enemies/Tank3"]
 one_shot = true

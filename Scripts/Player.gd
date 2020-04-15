@@ -1,5 +1,7 @@
 extends KinematicBody
 
+export var score = 0
+
 onready var Camera = $Pivot/Camera
 var Bullet = preload("res://Scenes/Bullet.tscn")
 
@@ -14,8 +16,13 @@ var health = 100
 
 var velocity = Vector3()
 
+
+
 func _ready(): 
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	
+	
+
 	
 func take_damage(d):
 	health -= d

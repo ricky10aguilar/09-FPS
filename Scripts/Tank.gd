@@ -4,11 +4,13 @@ extends KinematicBody
 # searching
 # found
 # shooting
+export var score = 10 
 
 var state = ""
 var speed = 1
 onready var Scan = $Scanner
 var Bullet = preload("res://Scenes/EnemyBullet.tscn")
+onready var Score = get_node("/root/Game/HUD/Score")
 var health = 100 
 
 

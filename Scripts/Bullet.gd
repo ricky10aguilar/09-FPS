@@ -2,7 +2,9 @@ extends Area
 
 var speed = 35
 var damage = 25
+var score = 0
 var velocity = Vector3()
+
 
 func _ready():
 	pass
@@ -25,7 +27,7 @@ func _on_Bullet_body_entered(body):
 		queue_free()
 	if body.name == "Tank":
 		print(body.health)
-		body.take_damage(damage)
+		body.take_damage(damage)	
 		queue_free()
 	if body.name == "Tank2":
 		print(body.health)
@@ -42,5 +44,6 @@ func _on_Bullet_body_entered(body):
 	if body.name == "Tank5":
 		print(body.health)
 		body.take_damage(damage)
+	
 		queue_free()
 	
